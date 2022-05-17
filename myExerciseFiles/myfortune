@@ -1,0 +1,13 @@
+#!/bin/bash
+echo -e "\t\t Hello this is my Fortune Game"
+
+declare -i selectedNumber=$(( 0 + $RANDOM % 5 ))
+
+declare -a luckyNumbers=(5 2 1)
+
+case $selectedNumber in
+    1) sleep 1; echo "You are Number One"; sleep 1;;
+    2) sleep 2; echo "Getting Second better than nothing"; sleep 1;;
+    5) sleep 5; echo "You are Lucky , you Got new Hand"; sleep 1;;
+    *) sleep 1; echo "Not your best day";;
+esac
